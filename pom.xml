@@ -9,6 +9,11 @@
     <artifactId>migration-engineering-with-openrewrite</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <modules>
+        <module>books</module>
+        <module>recipes</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -20,4 +25,24 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openrewrite.maven</groupId>
+                <artifactId>rewrite-maven-plugin</artifactId>
+                <version>6.23.0</version>
+                <configuration>
+                    <exportDatatables>true</exportDatatables>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-spring</artifactId>
+                        <version>6.18.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
 </project>
