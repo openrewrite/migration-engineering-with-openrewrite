@@ -1,0 +1,9 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: org.openrewrite.AssertToAssertThatRecipesForTests
+displayName: Convert `assert` to `assertThat` in tests
+description: Convert `assert` to `assertThat` in test methods only.
+preconditions:
+  - org.openrewrite.java.search.IsLikelyTest
+recipeList:
+  - org.openrewrite.recipes.AssertToAssertThatRecipes
