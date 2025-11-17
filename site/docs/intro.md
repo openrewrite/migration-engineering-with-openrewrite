@@ -8,7 +8,7 @@ Today, we're going to apply migration engineering with OpenRewrite.
 
 This workshop consists of several sections, each focusing on a different aspect of improving your code.
 
-1. [Old habits](./category/old-habits/) - Starting out, we'll look at legacy testing frameworks and libraries that are still in use today.
+1. [Outdated patterns](./category/outdated-patterns/) - Starting out, we'll look at legacy testing frameworks and libraries that are still in use today.
 1. [JUnit Jupiter](./category/junit-jupiter/) - Next, we'll upgrade to JUnit 6 and learn its new features.
 1. [Adopt AssertJ](./category/adopt-assertj/) - Then, we'll dive into AssertJ for more expressive assertions.
 1. [Upgrade your projects](./category/upgrade-your-projects) - Next, we'll apply what we've learned to upgrade real-world projects.

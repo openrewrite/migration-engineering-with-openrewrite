@@ -43,6 +43,11 @@
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-java-dependencies</artifactId>
+                        <version>1.45.0</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-migrate-java</artifactId>
                         <version>3.21.2</version>
                     </dependency>
