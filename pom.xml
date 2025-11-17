@@ -38,6 +38,16 @@
                 <dependencies>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-migrate-java</artifactId>
+                        <version>3.21.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-testing-frameworks</artifactId>
+                        <version>3.21.3</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-spring</artifactId>
                         <version>6.18.0</version>
                     </dependency>
