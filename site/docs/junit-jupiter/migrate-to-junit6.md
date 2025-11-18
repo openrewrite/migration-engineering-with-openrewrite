@@ -76,7 +76,7 @@ class ConditionalTest {
 
     @Test
     @EnabledOnJre(JRE.JAVA_21)
-    void onlyOnJava25() {
+    void onlyOnJava21() {
         assertTrue(true);
     }
 
