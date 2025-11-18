@@ -374,6 +374,3 @@ After adding the file, you should see a run icon in the left margin offering to 
 
 </TabItem>
 </Tabs>
-
-See the [Migrate to JUnit 5](../junit-jupiter/migrate-to-junit5.md) page for more migration options.
-
