@@ -167,8 +167,8 @@ AssertJ provides better diff output for multi-line strings and offers flexible c
 
 ## SequencedCollection
 
-Java 25 introduced `SequencedCollection`, `SequencedSet`, and `SequencedMap` interfaces that provide uniform access to first and last elements.
-Before Java 25, accessing the last element required verbose index calculations. AssertJ 3.25.0+ provides dedicated assertions for these collections.
+Java 21 introduced `SequencedCollection`, `SequencedSet`, and `SequencedMap` interfaces that provide uniform access to first and last elements.
+Before Java 21, accessing the last element required verbose index calculations. AssertJ 3.25.0+ provides dedicated assertions for these collections.
 
 <Tabs>
 <TabItem value="before" label="Before">
@@ -234,4 +234,4 @@ AssertJ's `last()` method is clear and expressive. It works with any `SequencedC
 ## Adopting Java 25+ features in your tests
 
 You can use OpenRewrite to automatically migrate your tests to use Java 25 features like text blocks and `SequencedCollection` assertions.
-See [Java 25 for tests](../upgrade-your-projects/java-21-for-tests.md) guide for detailed instructions on setting this up in your project.
+See [Java 25 for tests](../upgrade-your-projects/java-25-for-tests.md) guide for detailed instructions on setting this up in your project.
