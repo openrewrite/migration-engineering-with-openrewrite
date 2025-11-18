@@ -179,3 +179,8 @@ dependencies {
 
 </TabItem>
 </Tabs>
+
+
+## Next steps
+
+If you want to run the Java 25 upgrade recipe on your main source code as well, you can remove the precondition from the `rewrite.yml` file, or just run the `UpgradeToJava25` recipe directly.
