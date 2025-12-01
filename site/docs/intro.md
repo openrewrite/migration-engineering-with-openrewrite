@@ -37,6 +37,7 @@ You're also welcome to use your own projects to try out the improvements alongsi
 ### What you'll need
 
 - Java 8+, to run recipes
+- [Moderne CLI](https://docs.moderne.io/user-documentation/moderne-cli/getting-started/cli-intro) (recommended)
 - Gradle 4.10+, or
 - Maven 3+
-- Java 25+, to develop recipes
+- Java 25, to develop recipes
