@@ -33,7 +33,7 @@ mod config recipes jar install org.openrewrite.recipe:rewrite-java-security:LATE
 
 3. Run the recipe.
 ```shell title="shell"
-mod run ~/workspace/ --recipe org.openrewrite.java.dependencies.DependencyVulnerabilityCheck
+mod run ~/workspace/ --recipe org.openrewrite.java.dependencies.DependencyVulnerabilityCheck -P "scope=runtime" -P "overrideTransitive=True" -P "maximumUpgradeDelta=minor"
 ```
 
 </TabItem>
