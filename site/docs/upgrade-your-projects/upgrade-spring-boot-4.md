@@ -33,7 +33,7 @@ mod config recipes jar install org.openrewrite.recipe:rewrite-spring:LATEST
 
 3. Run the recipe.
 ```shell title="shell"
-mod run ~/workspace/ --recipe org.openrewrite.java.spring.boot4.UpgradeSpringBoot_4_0
+mod run ~/workspace/ --recipe UpgradeSpringBoot_4_0
 ```
 
 </TabItem>
