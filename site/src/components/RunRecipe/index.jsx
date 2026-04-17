@@ -27,11 +27,14 @@ export default function RunRecipe({
   modRunArgs,
 }) {
   // Derive the IntelliJ wrapper name from the display name if not provided
-  const wrapperName = intellijWrapperName || (recipeDisplayName ? `com.github.timtebeek.${recipeDisplayName.replace(/\s+/g, '')}` : recipeName);
-  const description = intellijDescription || (recipeDisplayName ? `${recipeDisplayName} and apply best practices to assertions.` : '');
+  const wrapperName = intellijWrapperName || (recipeDisplayName ? `com.yourorg.${recipeDisplayName.replace(/\s+/g, '')}` : recipeName);
+  const description = intellijDescription || recipeDisplayName || '';
 
   // Extract groupId and artifactId from the artifact coordinates
   const [groupId, artifactId] = artifact.split(':');
+
+  // rewrite-java is bundled with rewrite-maven-plugin, so Maven does not need the extra coordinates
+  const bundledWithMavenPlugin = artifact === 'org.openrewrite:rewrite-java';
 
   // Moderne CLI code snippets
   const modBuild = `mod build ~/workspace/`;
@@ -73,9 +76,22 @@ mod config recipes yaml install /path/to/your/rewrite.yml`
   }
 
   // Maven CLI
-  const mavenCli = `mvn -U org.openrewrite.maven:rewrite-maven-plugin:run --define rewrite.recipeArtifactCoordinates=${artifact}:RELEASE --define rewrite.activeRecipes=${recipeName} --define rewrite.exportDatatables=true`;
+  const mavenCli = bundledWithMavenPlugin
+    ? `mvn -U org.openrewrite.maven:rewrite-maven-plugin:run --define rewrite.activeRecipes=${recipeName} --define rewrite.exportDatatables=true`
+    : `mvn -U org.openrewrite.maven:rewrite-maven-plugin:run --define rewrite.recipeArtifactCoordinates=${artifact}:RELEASE --define rewrite.activeRecipes=${recipeName} --define rewrite.exportDatatables=true`;
 
   // Maven POM
+  const mavenPomDependencies = bundledWithMavenPlugin
+    ? ''
+    : `
+        <dependencies>
+          <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>${artifactId}</artifactId>
+            <version>LATEST</version>
+          </dependency>
+        </dependencies>`;
+
   const mavenPom = `<project>
   <build>
     <plugins>
@@ -88,14 +104,7 @@ mod config recipes yaml install /path/to/your/rewrite.yml`
           <activeRecipes>
             <recipe>${recipeName}</recipe>
           </activeRecipes>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>${groupId}</groupId>
-            <artifactId>${artifactId}</artifactId>
-            <version>LATEST</version>
-          </dependency>
-        </dependencies>
+        </configuration>${mavenPomDependencies}
       </plugin>
     </plugins>
   </build>
