@@ -6,6 +6,14 @@ sidebar_position: 10
 
 Here are some additional resources to help you learn more about the topics covered in this workshop:
 
+## Bringing this back to your team
+
+- Pilot one low-risk recipe (e.g. [Dependency Insight](./analyze-first/dependency-insight)) on a single repository before scaling across the team.
+- Run a 1-hour dependency review with your team, using [Generate DevCenter](./analyze-first/generate-devcenter) to highlight concrete upgrade candidates.
+- Add a recurring DevCenter review to an existing ritual (sprint planning, architecture review, ops check-in) to keep migrations visible.
+- Install the [Moderne CLI](https://docs.moderne.io/user-documentation/moderne-cli/getting-started/cli-intro) in CI so drift and new deprecations surface automatically.
+- Pair a teammate through [Upgrade your projects](./category/upgrade-your-projects/) against one of your real repositories to build shared experience.
+
 ## Automated Migration and Modernization
 - [OpenRewrite Documentation](https://docs.openrewrite.org/): Official documentation for OpenRewrite, including recipes and usage instructions.
 - [Moderne Documentation](https://docs.moderne.io/): Comprehensive guides and references for using Moderne, to scale up your efforts.

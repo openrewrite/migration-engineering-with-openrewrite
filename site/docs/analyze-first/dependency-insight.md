@@ -12,6 +12,12 @@ This recipe provides detailed insight into a dependency's usage across your proj
 
 You can run the search recipe using one of the following methods, after creating a local `rewrite.yml` file in your project.
 
+:::tip Pin versions in CI
+
+Throughout this workshop we use `LATEST` (Maven) and `latest.release` (Gradle) so you always get the newest recipes. For reproducible CI and production builds, pin a specific version instead (e.g. `<version>1.54.0</version>`).
+
+:::
+
 ```yaml
 ---
 type: specs.openrewrite.org/v1beta/recipe
