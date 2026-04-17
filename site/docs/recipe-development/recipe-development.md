@@ -302,8 +302,8 @@ Use the OpenRewrite Maven plugin to apply recipes to a codebase:
 ```bash
 cd /path/to/target/codebase
 mvn org.openrewrite.maven:rewrite-maven-plugin:run \
-  -Drewrite.recipeArtifactCoordinates=org.openrewrite:recipes:1.0-SNAPSHOT \
-  -Drewrite.activeRecipes=org.openrewrite.AssertToAssertThatRecipesForTests
+  --define rewrite.recipeArtifactCoordinates=org.openrewrite:recipes:1.0-SNAPSHOT \
+  --define rewrite.activeRecipes=org.openrewrite.AssertToAssertThatRecipesForTests
 ```
 
 ## Debugging Tips
