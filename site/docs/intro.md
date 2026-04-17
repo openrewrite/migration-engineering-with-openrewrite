@@ -12,8 +12,11 @@ This workshop consists of several sections, each focusing on a different aspect 
 1. [Outdated patterns](./category/outdated-patterns/) - We'll dive deeper into common legacy testing frameworks and libraries that are still in use today.
 1. [JUnit Jupiter](./category/junit-jupiter/) - Next, we'll upgrade to JUnit 6 and learn its new features.
 1. [Adopt AssertJ](./category/adopt-assertj/) - Then, we'll dive into AssertJ for more expressive assertions.
-1. [Upgrade your projects](./category/upgrade-your-projects) - Next, we'll apply what we've learned to upgrade real-world projects.
+1. [Upgrade your projects](./category/upgrade-your-projects/) - Next, we'll apply what we've learned to upgrade real-world projects.
+1. [Secure your projects](./category/secure-your-projects/) - We'll scan for vulnerable dependencies and remediate common OWASP findings.
 1. [Recipe development](./category/recipe-development/) - Finally, we'll learn how to create custom OpenRewrite recipes to automate improvements in your own codebases.
+
+When you're done, see [Further resources](./further-resources) for links to keep learning.
 
 ## Getting Started
 
@@ -28,6 +31,12 @@ cd migration-engineering-with-openrewrite
 
 This repository contains example code that you'll use throughout the workshop to explore the topics, write tests, and practice refactoring techniques.
 
+The repository has three top-level directories you should know about:
+
+- `books/` - Example projects that the recipes get applied to. You'll see before/after transformations here.
+- `recipes/` - Refaster templates and tests you'll complete in the [Recipe development](./category/recipe-development/) section.
+- `site/` - This documentation site. You generally won't edit anything here.
+
 ### Workshop structure
 
 We recommend going through the sections in order, but you're welcome to go at your own pace.
@@ -36,8 +45,13 @@ You're also welcome to use your own projects to try out the improvements alongsi
 
 ### What you'll need
 
-- Java 8+, to run recipes
-- [Moderne CLI](https://docs.moderne.io/user-documentation/moderne-cli/getting-started/cli-intro) (recommended)
-- Gradle 4.10+, or
-- Maven 3+
-- Java 25, to develop recipes
+To run recipes (sections 1-6):
+
+- Java 8+
+- [Moderne CLI](https://docs.moderne.io/user-documentation/moderne-cli/getting-started/cli-intro) (recommended), or
+- Maven 3+, or
+- Gradle 4.10+
+
+To develop your own recipes (the [Recipe development](./category/recipe-development/) section only):
+
+- Java 25
