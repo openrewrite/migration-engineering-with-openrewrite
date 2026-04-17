@@ -14,18 +14,6 @@
         <module>recipes</module>
     </modules>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.openrewrite.recipe</groupId>
-                <artifactId>rewrite-recipe-bom</artifactId>
-                <version>3.24.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <build>
         <plugins>
             <plugin>
