@@ -19,7 +19,7 @@
             <plugin>
                 <groupId>org.openrewrite.maven</groupId>
                 <artifactId>rewrite-maven-plugin</artifactId>
-                <version>6.38.0</version>
+                <version>6.39.0</version>
                 <configuration>
                     <exportDatatables>true</exportDatatables>
                 </configuration>
@@ -27,37 +27,37 @@
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-jackson</artifactId>
-                        <version>1.22.1</version>
+                        <version>1.22.2</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-java-dependencies</artifactId>
-                        <version>1.54.4</version>
+                        <version>1.54.5</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-logging-frameworks</artifactId>
-                        <version>3.27.2</version>
+                        <version>3.27.3</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-migrate-java</artifactId>
-                        <version>3.34.0</version>
+                        <version>3.34.1</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-static-analysis</artifactId>
-                        <version>2.34.0</version>
+                        <version>2.34.1</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-testing-frameworks</artifactId>
-                        <version>3.35.2</version>
+                        <version>3.35.3</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-spring</artifactId>
-                        <version>6.30.3</version>
+                        <version>6.30.4</version>
                     </dependency>
                 </dependencies>
             </plugin>
