@@ -39,7 +39,14 @@ With the Moderne CLI this only needs to be done once, after which subsequent rec
 
 ## Exercise A
 
-Run the above command on the `books` project in this repository, and check the changes made to the test files.
+From the root of the workshop repository, change into the `books` module and run the recipe:
+
+```bash title="shell"
+cd books
+# then re-run the Maven / Gradle / Moderne CLI command from the tabs above
+```
+
+Inspect the diff afterwards (`git diff` or your IDE's source-control view) to see the changes the recipe made to the test files.
 
 :::note
 

@@ -15,12 +15,14 @@ This workshop consists of several sections, each focusing on a different aspect 
 | 3 | [JUnit Jupiter](./category/junit-jupiter/) - Migrate to JUnit 5 (Jupiter), learn about JUnit 6, and explore features like parameterized and nested tests. | ~45 min | Beginner - Intermediate |
 | 4 | [Adopt AssertJ](./category/adopt-assertj/) - Dive into AssertJ for more expressive assertions. | ~60 min | Intermediate |
 | 5 | [Upgrade your projects](./category/upgrade-your-projects/) - Apply what we've learned to upgrade real-world projects. | ~75 min | Intermediate |
-| 6 | [Secure your projects](./category/secure-your-projects/) - Scan for vulnerable dependencies and remediate common OWASP findings. | ~30 min | Beginner - Intermediate |
+| 6 | [Secure your projects](./category/secure-your-projects/) - Scan for vulnerable dependencies and remediate common OWASP findings. *(Moderne CLI only)* | ~30 min | Beginner - Intermediate |
 | 7 | [Recipe development](./category/recipe-development/) - Create custom OpenRewrite recipes to automate improvements in your own codebases. | ~60 min | Advanced (optional) |
 
 :::tip
 
 **Short on time?** Sections 1-4 form a self-contained "quick wins" track (~3 hours) that covers the most impactful improvements. Sections 5-7 go deeper and can be tackled later.
+
+**Running a 4-hour workshop?** Sections 1-4 plus a brief look at [Secure your projects](./category/secure-your-projects/) (~3h30 of content + two 15-minute breaks) fit comfortably in a four-hour session.
 
 :::
 
@@ -53,13 +55,11 @@ You're also welcome to use your own projects to try out the improvements alongsi
 
 ### What you'll need
 
-To run recipes (sections 1-6):
-
-- Java 8+
-- [Moderne CLI](https://docs.moderne.io/user-documentation/moderne-cli/getting-started/cli-intro) (recommended), or
-- Maven 3+, or
-- Gradle 4.10+
-
-To develop your own recipes (the [Recipe development](./category/recipe-development/) section only):
-
-- Java 25
+- `git`, to clone the repository
+- Java 21+ (the workshop's `books/` module compiles its tests with `--release 25`, so an older JDK will fail at `mvn test`-time even though most recipes themselves only need Java 8+)
+- One of the following recipe runners:
+  - [Moderne CLI](https://docs.moderne.io/user-documentation/moderne-cli/getting-started/cli-intro) (recommended, and required for [Secure your projects](./category/secure-your-projects/)), or
+  - Maven 3+, or
+  - Gradle 4.10+
+- For the [Recipe development](./category/recipe-development/) section: Java 25
+- IntelliJ IDEA (optional) — Community Edition is fine; Ultimate adds direct OpenRewrite plugin support

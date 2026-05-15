@@ -19,5 +19,5 @@ You can run the search recipe using one of the following methods.
 
 ## Analyze the Results
 
-After running the recipe, you will find a data table for `MethodCalls` in the `target/rewrite/datatables/` directory for Maven, or `build` for Gradle build, or in the output directory specified for the Moderne CLI.
+After running the recipe, you will find a data table for `MethodCalls` in a timestamped subdirectory under `target/rewrite/datatables/` for Maven (e.g. `target/rewrite/datatables/2025-11-04_09-12-44-123/org.openrewrite.java.table.MethodCalls.csv`), or under `build/` for Gradle, or in the output directory specified for the Moderne CLI.
 You will also see deprecated usages reported in both the console output, as in the source code.
