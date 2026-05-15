@@ -23,13 +23,13 @@ The recipes are developed in the `recipes/` module:
 recipes/
 ├── pom.xml                                   # Maven configuration
 ├── src/main/java/
-│   └── com/github/timtebeek/recipes/
+│   └── org/openrewrite/recipes/
 │       └── AssertToAssertThat.java           # Refaster templates
 ├── src/main/resources/META-INF/rewrite/
 │   ├── rewrite.yml                           # Recipe composition
 │   └── classpath.tsv.gz                      # Type information
 └── src/test/java/
-    └── com/github/timtebeek/recipes/
+    └── org/openrewrite/recipes/
         └── AssertToAssertThatTest.java       # Recipe tests
 ```
 
@@ -69,7 +69,7 @@ When you compile the project from the `recipes` directory, the `rewrite-templati
 
 ```bash
 mvn clean compile
-# Generates: recipes/target/generated-sources/annotations/com/github/timtebeek/recipes/AssertToAssertThatRecipes.java
+# Generates: recipes/target/generated-sources/annotations/org/openrewrite/recipes/AssertToAssertThatRecipes.java
 ```
 
 The generated class contains one `Recipe` for each Refaster rule.
@@ -313,7 +313,7 @@ mvn org.openrewrite.maven:rewrite-maven-plugin:run \
 Check the generated recipe code:
 
 ```bash
-cat target/generated-sources/annotations/com/github/timtebeek/recipes/AssertToAssertThatRecipes.java
+cat target/generated-sources/annotations/org/openrewrite/recipes/AssertToAssertThatRecipes.java
 ```
 
 ### Test Individual Templates

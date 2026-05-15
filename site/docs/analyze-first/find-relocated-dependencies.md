@@ -19,5 +19,5 @@ You can run the search recipe using one of the following methods.
 
 ## Analyze the Results
 
-After running the recipe, you will find a data table for `RelocatedDependencyReport` in the `target/rewrite/datatables/` directory for Maven, or `build` for Gradle build, or in the output directory specified for the Moderne CLI.
+After running the recipe, you will find a data table for `RelocatedDependencyReport` in a timestamped subdirectory under `target/rewrite/datatables/` for Maven, or under `build/` for Gradle, or in the output directory specified for the Moderne CLI.
 You will also see relocated dependencies called out in the source code.
