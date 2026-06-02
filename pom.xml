@@ -32,7 +32,7 @@
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-java-dependencies</artifactId>
-                        <version>1.55.0</version>
+                        <version>1.55.2</version>
                     </dependency>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
