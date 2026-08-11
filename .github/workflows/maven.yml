@@ -18,6 +18,12 @@ jobs:
     name: Build and verify
     runs-on: ubuntu-latest
 
+    # Activates the codegenome profile in pom.xml; empty on pull requests from forks, which
+    # receive no secrets, leaving the profile inactive so those builds resolve from Central.
+    env:
+      CODEGENOME_USERNAME: ${{ secrets.CGP_ARTIFACTS_MAVEN_USERNAME }}
+      CODEGENOME_TOKEN: ${{ secrets.CGP_ARTIFACTS_MAVEN_TOKEN }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v7
@@ -28,6 +34,9 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
           cache: 'maven'
+          server-id: codegenome
+          server-username: CODEGENOME_USERNAME
+          server-password: CODEGENOME_TOKEN
 
       - name: Build with Maven
         run: mvn verify
