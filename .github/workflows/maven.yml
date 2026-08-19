@@ -21,8 +21,8 @@ jobs:
     # Activates the codegenome profile in pom.xml; empty on pull requests from forks, which
     # receive no secrets, leaving the profile inactive so those builds resolve from Central.
     env:
-      CODEGENOME_USERNAME: ${{ secrets.CGP_ARTIFACTS_MAVEN_USERNAME }}
-      CODEGENOME_TOKEN: ${{ secrets.CGP_ARTIFACTS_MAVEN_TOKEN }}
+      CODEGENOME_USERNAME: ${{ secrets.CODEGENOME_USERNAME }}
+      CODEGENOME_TOKEN: ${{ secrets.CODEGENOME_TOKEN }}
 
     steps:
       - name: Checkout code
